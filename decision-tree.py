@@ -60,10 +60,5 @@ print(dtree.predict([[1,1,0]]))
 # print(clf_entropy.fit(X_train, y_train))
 # print(df)
 
-
-dot_data = StringIO()
-export_graphviz(dtree, out_file=dot_data,
-                filled=True, rounded=True,
-                special_characters=True)
-graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
+dot_data = dtree.export_graphviz(X_train, out_file='dtree.dot')
 Image(graph.create_png())
