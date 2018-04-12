@@ -26,7 +26,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 
 
-titanic_df = pd.read_csv("./titanic_data_set/train.csv", index_col=0)
+titanic_df = pd.read_csv("./titanic_data_set/train.csv")
 titanic_test = pd.read_csv("./titanic_data_set/test.csv")
 
 print ("Dataset Lenght:: ", len(titanic_df))
